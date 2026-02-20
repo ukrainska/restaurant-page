@@ -1,4 +1,4 @@
-import restImage from "./assets/images/restaurant";
+import restImage from "./assets/images/restaurant.jpg";
 
 function loadHome() {
     const content = document.getElementById("content");
@@ -18,6 +18,10 @@ function loadHome() {
 
     const logo = document.createElement("img");
     logo.src = restImage;
+    logo.alt = "Restaurant logo";
+
+    content.appendChild(introduction);
+    content.appendChild(logo);
 }
 
 export default loadHome;

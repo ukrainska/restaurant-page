@@ -3,3 +3,55 @@
     padding: 0;
     box-sizing: content-box;
 }
+
+:root {
+    --main-color: #EDC5AB;
+    --nav-color: #FBF1EA; 
+}
+
+.main-page {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    background-color: var(--main-color);
+}
+
+header {
+    grid-row: 1;
+    padding: 1.5rem;
+    background-color: var(--nav-color);
+}
+.nav {
+    display: flexbox;
+    justify-content: center;
+    align-items: center;
+    margin: 1.5rem;
+    gap: 1rem;
+}
+
+#content {
+    grid-row: 2;
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+}
+
+.introduction {
+    grid-column: 1;
+    place-items: center;
+    padding: 1.2rem;
+}
+
+.logo {
+    grid-column: 2;
+    padding: 1.2rem;
+}
+
+img {
+    max-width: 100%;
+    height: auto; 
+    display: block;
+}
