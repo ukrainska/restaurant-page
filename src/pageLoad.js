@@ -16,12 +16,17 @@ function loadHome() {
     introduction.appendChild(heading);
     introduction.appendChild(paragraph);
 
+    const image = document.createElement("div");
+    image.classList.add("image");
+
     const logo = document.createElement("img");
     logo.src = restImage;
     logo.alt = "Restaurant logo";
 
+    image.appendChild(logo);
+
     content.appendChild(introduction);
-    content.appendChild(logo);
+    content.appendChild(image);
 }
 
 export default loadHome;

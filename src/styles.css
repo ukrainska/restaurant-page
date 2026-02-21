@@ -1,12 +1,15 @@
 * {
     margin: 0;
     padding: 0;
-    box-sizing: content-box;
+    box-sizing: border-box;
 }
 
 :root {
-    --main-color: #EDC5AB;
-    --nav-color: #FBF1EA; 
+    --main-color: #ECD9CB;
+    --nav-color: #D4A787; 
+    --navB-color: #EBD9CC;
+    --navB-cover-color: #F4EAE2;
+    --intro-color: #E3CAB8;
 }
 
 .main-page {
@@ -22,36 +25,68 @@ header {
     padding: 1.5rem;
     background-color: var(--nav-color);
 }
-.nav {
-    display: flexbox;
+
+nav {
+    display: flex;
     justify-content: center;
     align-items: center;
-    margin: 1.5rem;
-    gap: 1rem;
+    gap: 3rem;
+}
+
+nav button {
+    font-size: 1.2rem;
+    padding: 0.5rem 7rem;
+    border: solid 1px var(--nav-border);
+    border-radius: 40px;
+    background-color: var(--navB-color);
+}
+
+nav button:hover {
+    background-color: var(--navB-cover-color);
 }
 
 #content {
     grid-row: 2;
     display: grid;
-    grid-auto-flow: column;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-    align-items: center;
+    grid-template-columns: 1fr 1.4fr;
+    
+    gap: 2rem;
+    align-items: stretch;
+    
+    padding: 2rem;
 }
 
 .introduction {
-    grid-column: 1;
-    place-items: center;
-    padding: 1.2rem;
+    background-color: var(--intro-color);
+    border-radius: 40px 80px;
+    padding: 4rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
 }
 
-.logo {
-    grid-column: 2;
-    padding: 1.2rem;
+.introduction h1 {
+    text-align: center;
+    font-size: 3rem;
+}
+
+.introduction p {
+    text-align: center;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    line-height: 2em;
+}
+
+.image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
 }
 
 img {
-    max-width: 100%;
-    height: auto; 
-    display: block;
+    border-radius: 80px 40px;
+    overflow: hidden;
 }
