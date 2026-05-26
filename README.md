@@ -29,3 +29,7 @@ This project was created to practice generating page content with JavaScript and
 
 - Add working Menu, About, Access and Reservation pages
 - Improve mobile responsiveness
+
+## Live Demo
+
+[View the project here] (https://ukrainska.github.io/restaurant-page/)
